@@ -1,0 +1,31 @@
+{
+  "name": "Tbook_net",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "bson": "^0.4.20",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "ejs": "^2.3.4",
+    "errorhandler": "*",
+    "express": "~4.13.1",
+    "express-session": ">= 1.6.1",
+    "gulp": "^3.9.0",
+    "jade": "~1.11.0",
+    "kerberos": "0.0.17",
+    "method-override": ">= 2.0.2",
+    "mongoose": "^4.3.3",
+    "morgan": "^1.6.1",
+    "name": "0.0.2",
+    "passport": ">= 0.0.0",
+    "passport-facebook": ">= 0.0.0",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-image-gallery": "^0.5.2",
+    "serve-favicon": "~2.3.0"
+  }
+}

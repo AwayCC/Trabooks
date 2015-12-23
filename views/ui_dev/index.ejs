@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en" data-framework="javascript">
+	<head>
+		<meta charset="utf-8">
+		<title>Tbook • Index UI Test</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="/dev/index.css" >
+	</head>
+	<body>
+		<div id="root">
+      <div id = "header_bar" class="wide-section">
+      </div>
+
+      <div id = "middle_content" class="wide-section">
+				<div class="col-sm-6 content_block">
+					<div id="node_container">
+						<div id = "node_list">
+						<div class="node">
+							<div class="node_content">
+								<div class="col-sm-3">
+									<img class="node_picture" src="http://imgur.com/fRQDoEq.jpg"></img>
+								</div>
+								<h1 class="node_title">ACMI</h1>
+								<p class="node_content">This is a place.......</p>
+							</div>
+						</div>
+						<div class="node">
+							<div class="node_content">
+								<div class="col-sm-3">
+									<img class="node_picture" src="http://i.imgur.com/KJn7UqN.jpg"></img>
+								</div>
+								<h1 class="node_title">Cradle Mountain</h1>
+								<p class="node_content">This is a place.......</p>
+							</div>
+						</div>
+						<div class="node">
+							<div class="node_content">
+								<div class="col-sm-3">
+									<img class="node_picture" src="http://i.imgur.com/KJn7UqN.jpg"></img>
+								</div>
+								<h1 class="node_title">Cradle Mountain</h1>
+								<p class="node_content">This is a place.......</p>
+							</div>
+						</div>
+						<div class="node">
+							<div class="node_content">
+								<div class="col-sm-3">
+									<img class="node_picture" src="http://i.imgur.com/KJn7UqN.jpg"></img>
+								</div>
+								<h1 class="node_title">Cradle Mountain</h1>
+								<p class="node_content">This is a place.......</p>
+							</div>
+						</div>
+						<div class="node">
+							<div class="node_content">
+								<div class="col-sm-3">
+									<img class="node_picture" src="http://i.imgur.com/KJn7UqN.jpg"></img>
+								</div>
+								<h1 class="node_title">Cradle Mountain</h1>
+								<p class="node_content">This is a place.......</p>
+							</div>
+						</div>
+						<div class="node">
+							<div class="node_content">
+								<div class="col-sm-3">
+									<img class="node_picture" src="http://i.imgur.com/qWho7rQ.jpg"></img>
+								</div>
+								<h1 class="node_title">Port Author</h1>
+								<p class="node_content">This is a place.......</p>
+							</div>
+						</div>
+					</div>
+					</div>
+				</div>
+				<div class="col-sm-6 content_block">
+					<div id="map"></div>
+				</div>
+      </div>
+
+      <div id = "bottom_bar" class="wide-section">
+      </div>
+
+    </div>
+		<script type="text/javascript">
+var map;
+function initMap() {
+  var styleArray =[
+    {
+      "featureType": "landscape",
+      "elementType": "geometry",
+      "stylers": [
+        {
+          "hue": "#f3f4f4"
+        },
+        {
+          "saturation": -84
+        },
+        {
+          "lightness": 59
+        },
+        {
+          "visibility": "on"
+        }
+      ]
+    },
+    {
+      "featureType": "landscape",
+      "elementType": "labels",
+      "stylers": [
+        {
+          "hue": "#ffffff"
+        },
+        {
+          "saturation": -100
+        },
+        {
+          "lightness": 100
+        },
+        {
+          "visibility": "off"
+        }
+      ]
+    },
+    {
+      "featureType": "poi.park",
+      "elementType": "geometry",
+      "stylers": [
+        {
+          "hue": "#83cead"
+        },
+        {
+          "saturation": 1
+        },
+        {
+          "lightness": -15
+        },
+        {
+          "visibility": "on"
+        }
+      ]
+    },
+    {
+      "featureType": "poi.school",
+      "elementType": "all",
+      "stylers": [
+        {
+          "hue": "#d7e4e4"
+        },
+        {
+          "saturation": -60
+        },
+        {
+          "lightness": 23
+        },
+        {
+          "visibility": "on"
+        }
+      ]
+    },
+    {
+      "featureType": "road",
+      "elementType": "geometry",
+      "stylers": [
+        {
+          "hue": "#ffffff"
+        },
+        {
+          "saturation": -100
+        },
+        {
+          "lightness": 100
+        },
+        {
+          "visibility": "on"
+        }
+      ]
+    },
+    {
+      "featureType": "road",
+      "elementType": "labels",
+      "stylers": [
+        {
+          "hue": "#bbbbbb"
+        },
+        {
+          "saturation": -100
+        },
+        {
+          "lightness": 26
+        },
+        {
+          "visibility": "on"
+        }
+      ]
+    },
+    {
+      "featureType": "road.highway",
+      "elementType": "geometry",
+      "stylers": [
+        {
+          "hue": "#ffcc00"
+        },
+        {
+          "saturation": 100
+        },
+        {
+          "lightness": -22
+        },
+        {
+          "visibility": "on"
+        }
+      ]
+    },
+    {
+      "featureType": "road.arterial",
+      "elementType": "geometry",
+      "stylers": [
+        {
+          "hue": "#ffcc00"
+        },
+        {
+          "saturation": 100
+        },
+        {
+          "lightness": -35
+        },
+        {
+          "visibility": "simplified"
+        }
+      ]
+    },
+    {
+      "featureType": "water",
+      "elementType": "all",
+      "stylers": [
+        {
+          "hue": "#7fc8ed"
+        },
+        {
+          "saturation": 55
+        },
+        {
+          "lightness": -6
+        },
+        {
+          "visibility": "on"
+        }
+      ]
+    },
+    {
+      "featureType": "water",
+      "elementType": "labels",
+      "stylers": [
+        {
+          "hue": "#7fc8ed"
+        },
+        {
+          "saturation": 55
+        },
+        {
+          "lightness": -6
+        },
+        {
+          "visibility": "off"
+        }
+      ]
+    }
+  ];
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: -34.397, lng: 150.644},
+    styles :styleArray,
+    zoom: 8
+  });
+}
+
+    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZw0ZSI-DFPINJm6rt2t6o8xe-XK295WU&callback=initMap">
+    </script>
+		<script src="/javascripts/bundle.js"></script>
+	</body>
+</html>
